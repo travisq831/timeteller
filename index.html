@@ -7,6 +7,7 @@ var mm = today.getMonth()+1; //January is 0!
 var yyyy = today.getFullYear();
 var time = today.getTime();
 var h = today.getHours();
+var m = today.getMinutes()
         if(dd<10) {
     dd='0'+dd
 } 
@@ -14,9 +15,12 @@ var h = today.getHours();
 if(mm<10) {
     mm='0'+mm
 } 
-
+if(h>12){
+    h=h-12
+}
 today = mm+'/'+dd+'/'+yyyy;
 document.write("the current date is "+today);
 console.log(h)
+console.log(m)
     </script>
 </html>
